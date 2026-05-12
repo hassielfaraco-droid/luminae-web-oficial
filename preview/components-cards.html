@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300&family=Jost:wght@300;400;500&display=swap');
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body { background: #E8DDD0; padding: 24px; font-family: 'Jost', sans-serif; }
+  .cards { display: flex; gap: 16px; }
+  .card { background: #F7F2EB; outline: 1px solid rgba(196,168,130,0.15); width: 180px; flex-shrink: 0; }
+  .img { aspect-ratio: 1; background: #E8DDD0; position: relative; display: flex; align-items: center; justify-content: center; }
+  .tag { position:absolute; top:10px; left:10px; font-size:0.55rem; letter-spacing:0.25em; text-transform:uppercase; font-weight:500; padding:3px 8px; }
+  .tag-new  { background:#2C2416; color:#B8975A; }
+  .tag-sale { background:#8B2020; color:white; }
+  .tag-best { background:#7A8C6E; color:white; }
+  .info { padding: 12px 14px; }
+  .vendor { font-size:0.55rem; letter-spacing:0.2em; text-transform:uppercase; color:#C4A882; margin-bottom:5px; }
+  .title  { font-family:'Cormorant Garamond',serif; font-size:0.95rem; font-weight:300; color:#2C2416; line-height:1.3; margin-bottom:8px; }
+  .price  { font-size:0.85rem; font-weight:500; color:#2C2416; }
+  .price-old { font-size:0.75rem; color:#C4A882; text-decoration:line-through; margin-left:6px; }
+  .placeholder { color:#C4A882; opacity:0.3; font-size:2rem; }
+</style>
+</head>
+<body>
+  <div class="cards">
+    <div class="card">
+      <div class="img">
+        <span class="placeholder">◈</span>
+        <div class="tag tag-new">Nuevo</div>
+      </div>
+      <div class="info">
+        <div class="vendor">La Roche-Posay</div>
+        <div class="title">Sérum Vitamina C Antioxidante</div>
+        <div><span class="price">$42.00</span></div>
+      </div>
+    </div>
+    <div class="card">
+      <div class="img">
+        <span class="placeholder">◈</span>
+        <div class="tag tag-best">Bestseller</div>
+      </div>
+      <div class="info">
+        <div class="vendor">CeraVe</div>
+        <div class="title">Hidratante Facial SPF 30</div>
+        <div><span class="price">$28.00</span></div>
+      </div>
+    </div>
+    <div class="card">
+      <div class="img">
+        <span class="placeholder">◈</span>
+        <div class="tag tag-sale">Oferta</div>
+      </div>
+      <div class="info">
+        <div class="vendor">The Ordinary</div>
+        <div class="title">Hyaluronic Acid 2% + B5</div>
+        <div><span class="price">$14.00</span><span class="price-old">$18.00</span></div>
+      </div>
+    </div>
+  </div>
+</body>
+</html>

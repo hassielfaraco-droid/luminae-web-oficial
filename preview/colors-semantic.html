@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Jost:wght@300;400&display=swap');
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body { background: #F7F2EB; font-family: 'Jost', sans-serif; padding: 24px; }
+  .grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(140px, 1fr)); gap: 8px; }
+  .item { display: flex; align-items: center; gap: 10px; }
+  .dot { width: 28px; height: 28px; flex-shrink: 0; }
+  .dot.outlined { outline: 1px solid rgba(196,168,130,0.4); }
+  .label { font-size: 0.6rem; letter-spacing: 0.15em; text-transform: uppercase; color: #2C2416; line-height: 1.5; }
+  .val { font-size: 0.6rem; color: #6A5A42; font-weight: 300; }
+</style>
+</head>
+<body>
+  <div class="grid">
+    <div class="item"><div class="dot" style="background:#2C2416;"></div><div><div class="label">bg-inverse</div><div class="val">--deep</div></div></div>
+    <div class="item"><div class="dot" style="background:#1A150D;"></div><div><div class="label">bg-footer</div><div class="val">--deep2</div></div></div>
+    <div class="item"><div class="dot" style="background:#F7F2EB;" class="outlined"></div><div><div class="label">bg-page</div><div class="val">--cream</div></div></div>
+    <div class="item"><div class="dot" style="background:#E8DDD0;"></div><div><div class="label">bg-surface</div><div class="val">--beige</div></div></div>
+    <div class="item"><div class="dot" style="background:#2C2416;"></div><div><div class="label">text-primary</div><div class="val">--deep</div></div></div>
+    <div class="item"><div class="dot" style="background:#6A5A42;"></div><div><div class="label">text-secondary</div><div class="val">--warm</div></div></div>
+    <div class="item"><div class="dot" style="background:#C4A882;"></div><div><div class="label">text-muted</div><div class="val">--earth</div></div></div>
+    <div class="item"><div class="dot" style="background:#F7F2EB; outline:1px solid rgba(196,168,130,0.4);"></div><div><div class="label">text-inverse</div><div class="val">--cream</div></div></div>
+    <div class="item"><div class="dot" style="background:#B8975A;"></div><div><div class="label">text-accent</div><div class="val">--gold</div></div></div>
+    <div class="item"><div class="dot" style="background:#B8975A;"></div><div><div class="label">border-focus</div><div class="val">--gold</div></div></div>
+    <div class="item"><div class="dot" style="background:#8B2020;"></div><div><div class="label">tag-sale</div><div class="val">#8B2020</div></div></div>
+    <div class="item"><div class="dot" style="background:#7A8C6E;"></div><div><div class="label">tag-best</div><div class="val">--moss</div></div></div>
+  </div>
+</body>
+</html>

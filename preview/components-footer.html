@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<style>
+  @font-face { font-family:'Satoshi'; src:url('../fonts/Satoshi-Bold.otf') format('opentype'); font-weight:700; font-style:normal; }
+  @font-face { font-family:'Satoshi'; src:url('../fonts/Satoshi-Black.otf') format('opentype'); font-weight:900; font-style:normal; }
+  @font-face { font-family:'Plus Jakarta Sans'; src:url('../fonts/PlusJakartaSans-VariableFont_wght.ttf') format('truetype'); font-weight:200 800; font-style:normal; }
+  @font-face { font-family:'Inter'; src:url('../fonts/Inter-VariableFont_opsz_wght.ttf') format('truetype'); font-weight:100 900; font-style:normal; }
+  @font-face { font-family:'Inter'; src:url('../fonts/Inter-Italic-VariableFont_opsz_wght.ttf') format('truetype'); font-weight:100 900; font-style:italic; }
+  @import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@1,300&display=swap');
+  * { box-sizing:border-box; margin:0; padding:0; }
+  body { font-family:'Inter',sans-serif; }
+  .footer { background:#2C2416; padding:48px 40px 32px; }
+  .grid { display:grid; grid-template-columns:1.6fr 1fr 1fr 1fr; gap:40px; padding-bottom:36px; border-bottom:1px solid rgba(216,203,190,0.1); }
+
+  /* Logo */
+  .logo-text { font-family:'Satoshi',sans-serif; font-size:1.6rem; font-weight:900; color:#FFF8F0; letter-spacing:0.08em; line-height:1; }
+  .logo-sub  { font-family:'Plus Jakarta Sans',sans-serif; font-size:0.5rem; letter-spacing:0.35em; text-transform:uppercase; color:#B8975A; margin-top:5px; font-weight:400; }
+  .quote     { font-family:'Cormorant Garamond',serif; font-style:italic; font-weight:300; color:rgba(216,203,190,0.38); font-size:0.9rem; line-height:1.75; margin-top:18px; }
+
+  /* Socials */
+  .socials { display:flex; gap:8px; margin-top:20px; }
+  .social  { width:32px; height:32px; border:1px solid rgba(184,151,90,0.2); display:flex; align-items:center; justify-content:center; font-family:'Plus Jakarta Sans',sans-serif; font-size:0.48rem; letter-spacing:0.08em; text-transform:uppercase; color:#D8CBBE; }
+
+  /* Col */
+  .col-title { font-family:'Plus Jakarta Sans',sans-serif; font-size:0.58rem; letter-spacing:0.28em; text-transform:uppercase; color:#B8975A; margin-bottom:16px; font-weight:600; }
+  .col-link  { font-family:'Inter',sans-serif; font-size:0.82rem; font-weight:400; color:rgba(216,203,190,0.42); margin-bottom:10px; }
+
+  /* Bottom */
+  .bottom { display:flex; justify-content:space-between; align-items:center; margin-top:24px; flex-wrap:wrap; gap:12px; }
+  .copy   { font-family:'Inter',sans-serif; font-size:0.52rem; letter-spacing:0.12em; text-transform:uppercase; color:rgba(216,203,190,0.22); font-weight:400; }
+  .pay    { font-family:'Plus Jakarta Sans',sans-serif; font-size:0.5rem; letter-spacing:0.1em; text-transform:uppercase; border:1px solid rgba(184,151,90,0.12); padding:2px 8px; color:rgba(216,203,190,0.28); }
+</style>
+</head>
+<body>
+  <div class="footer">
+    <div class="grid">
+      <div>
+        <div class="logo-text">LUMINAE</div>
+        <div class="logo-sub">Venezuela · Latinoamérica</div>
+        <div class="quote">"Donde la luz se encuentra<br>con tu piel."</div>
+        <div class="socials">
+          <div class="social">IG</div>
+          <div class="social">TK</div>
+          <div class="social">WA</div>
+          <div class="social">YT</div>
+        </div>
+      </div>
+      <div>
+        <div class="col-title">Tienda</div>
+        <div class="col-link">Skincare</div>
+        <div class="col-link">Perfumería</div>
+        <div class="col-link">Wellness</div>
+        <div class="col-link">Ofertas</div>
+        <div class="col-link">Sets</div>
+      </div>
+      <div>
+        <div class="col-title">Ayuda</div>
+        <div class="col-link">¿Cómo comprar?</div>
+        <div class="col-link">Métodos de pago</div>
+        <div class="col-link">Envíos Venezuela</div>
+        <div class="col-link">Devoluciones</div>
+      </div>
+      <div>
+        <div class="col-title">Luminae</div>
+        <div class="col-link">Nuestra historia</div>
+        <div class="col-link">Blog de skincare</div>
+        <div class="col-link">Contacto</div>
+      </div>
+    </div>
+    <div class="bottom">
+      <div class="copy">© 2026 Luminae · Venezuela & Latinoamérica · Todos los derechos reservados</div>
+      <div style="display:flex;gap:5px;">
+        <span class="pay">Zelle</span>
+        <span class="pay">Binance</span>
+        <span class="pay">Zinli</span>
+        <span class="pay">PayPal</span>
+        <span class="pay">USD</span>
+      </div>
+    </div>
+  </div>
+</body>
+</html>

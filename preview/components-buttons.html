@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Jost:wght@300;400&display=swap');
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body { background: #F7F2EB; padding: 28px 32px; font-family: 'Jost', sans-serif; }
+  .row { display: flex; gap: 12px; flex-wrap: wrap; align-items: center; margin-bottom: 20px; }
+  .label { font-size: 0.55rem; letter-spacing: 0.2em; text-transform: uppercase; color: #B8975A; margin-bottom: 12px; }
+  .rule { height:1px; background:rgba(196,168,130,0.2); margin-bottom:18px; }
+
+  .btn-primary { display:inline-flex; align-items:center; gap:8px; padding:14px 28px; background:#2C2416; color:#F7F2EB; border:1px solid transparent; font-family:'Jost',sans-serif; font-size:0.68rem; letter-spacing:0.22em; text-transform:uppercase; cursor:pointer; }
+  .btn-primary-hover { display:inline-flex; align-items:center; gap:8px; padding:14px 28px; background:#B8975A; color:#2C2416; border:1px solid transparent; font-family:'Jost',sans-serif; font-size:0.68rem; letter-spacing:0.22em; text-transform:uppercase; }
+  .btn-secondary { display:inline-flex; align-items:center; gap:8px; padding:13px 24px; background:transparent; color:#2C2416; border:1px solid rgba(44,36,22,0.25); font-family:'Jost',sans-serif; font-size:0.68rem; letter-spacing:0.22em; text-transform:uppercase; cursor:pointer; }
+  .btn-secondary-hover { display:inline-flex; align-items:center; gap:8px; padding:13px 24px; background:#2C2416; color:#F7F2EB; border:1px solid transparent; font-family:'Jost',sans-serif; font-size:0.68rem; letter-spacing:0.22em; text-transform:uppercase; }
+  .btn-gold { display:inline-flex; align-items:center; gap:8px; padding:14px 28px; background:#B8975A; color:#2C2416; border:1px solid transparent; font-family:'Jost',sans-serif; font-size:0.68rem; letter-spacing:0.22em; text-transform:uppercase; cursor:pointer; }
+  .btn-disabled { display:inline-flex; align-items:center; gap:8px; padding:14px 28px; background:#2C2416; color:#F7F2EB; border:1px solid transparent; font-family:'Jost',sans-serif; font-size:0.68rem; letter-spacing:0.22em; text-transform:uppercase; opacity:0.4; }
+  .state { font-size:0.5rem; letter-spacing:0.15em; text-transform:uppercase; color:#C4A882; margin-top:6px; }
+</style>
+</head>
+<body>
+  <div class="label">Primary button</div>
+  <div class="row">
+    <div><div class="btn-primary">Explorar catálogo →</div><div class="state">Default</div></div>
+    <div><div class="btn-primary-hover">Explorar catálogo →</div><div class="state">Hover</div></div>
+    <div><div class="btn-disabled">Explorar catálogo →</div><div class="state">Disabled</div></div>
+  </div>
+  <div class="rule"></div>
+  <div class="label">Secondary button</div>
+  <div class="row">
+    <div><div class="btn-secondary">✦ Diagnóstico IA</div><div class="state">Default</div></div>
+    <div><div class="btn-secondary-hover">✦ Diagnóstico IA</div><div class="state">Hover</div></div>
+  </div>
+  <div class="rule"></div>
+  <div class="label">Gold button</div>
+  <div class="row">
+    <div><div class="btn-gold">Finalizar compra →</div><div class="state">Default</div></div>
+  </div>
+</body>
+</html>

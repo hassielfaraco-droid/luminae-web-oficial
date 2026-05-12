@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<title>Luminae · Logo Lockup</title>
+<style>
+  @font-face { font-family: 'Satoshi'; src: url('../fonts/Satoshi-Light.otf') format('opentype'); font-weight: 300; font-style: normal; font-display: swap; }
+  @font-face { font-family: 'Satoshi'; src: url('../fonts/Satoshi-Regular.otf') format('opentype'); font-weight: 400; font-style: normal; font-display: swap; }
+  @font-face { font-family: 'Satoshi'; src: url('../fonts/Satoshi-Medium.otf') format('opentype'); font-weight: 500; font-style: normal; font-display: swap; }
+  @font-face { font-family: 'Satoshi'; src: url('../fonts/Satoshi-Bold.otf') format('opentype'); font-weight: 700; font-style: normal; font-display: swap; }
+  @font-face { font-family: 'Satoshi'; src: url('../fonts/Satoshi-Black.otf') format('opentype'); font-weight: 900; font-style: normal; font-display: swap; }
+  @font-face { font-family: 'Plus Jakarta Sans'; src: url('../fonts/PlusJakartaSans-Regular.ttf') format('truetype'); font-weight: 400; font-style: normal; font-display: swap; }
+  @font-face { font-family: 'Plus Jakarta Sans'; src: url('../fonts/PlusJakartaSans-Medium.ttf') format('truetype'); font-weight: 500; font-style: normal; font-display: swap; }
+
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  :root {
+    --cream: #F7F2EB;
+    --deep: #2C2416;
+    --deep2: #1A150D;
+    --gold: #B8975A;
+    --tan: #C4A882;
+    --earth: #6A5A42;
+    --line: rgba(196,168,130,0.18);
+  }
+  body {
+    background: var(--cream);
+    padding: 56px 64px;
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    color: var(--deep);
+  }
+
+  /* ── Page header ─────────────────────────────────────── */
+  .page-eyebrow {
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-size: 0.6rem;
+    letter-spacing: 0.32em;
+    text-transform: uppercase;
+    color: var(--gold);
+    font-weight: 500;
+  }
+  .page-title {
+    font-family: 'Satoshi', sans-serif;
+    font-size: 1.9rem;
+    font-weight: 900;
+    letter-spacing: -0.01em;
+    color: var(--deep);
+    margin-top: 10px;
+  }
+  .page-meta {
+    font-size: 0.78rem;
+    color: var(--earth);
+    margin-top: 8px;
+    line-height: 1.6;
+    max-width: 560px;
+  }
+  .hairline {
+    height: 1px;
+    background: var(--line);
+    margin: 36px 0 40px;
+  }
+
+  /* ── Section ─────────────────────────────────────────── */
+  .section {
+    margin-bottom: 56px;
+  }
+  .section-title {
+    font-size: 0.55rem;
+    letter-spacing: 0.32em;
+    text-transform: uppercase;
+    color: var(--earth);
+    margin-bottom: 20px;
+  }
+
+  /* ── Lockup grid ─────────────────────────────────────── */
+  .grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 18px;
+  }
+  .swatch {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 220px;
+    position: relative;
+    border: 1px solid var(--line);
+  }
+  .swatch.cream { background: var(--cream); }
+  .swatch.deep  { background: var(--deep); }
+  .swatch.deep2 { background: var(--deep2); }
+
+  .swatch .tag {
+    position: absolute;
+    top: 14px;
+    left: 16px;
+    font-size: 0.5rem;
+    letter-spacing: 0.28em;
+    text-transform: uppercase;
+    font-weight: 500;
+  }
+  .swatch.cream .tag { color: var(--gold); }
+  .swatch.deep  .tag { color: var(--gold); }
+  .swatch.deep2 .tag { color: var(--gold); }
+
+  /* ── Logo wordmark ───────────────────────────────────── */
+  .wordmark {
+    font-family: 'Satoshi', sans-serif;
+    font-weight: 900;
+    text-transform: uppercase;
+    letter-spacing: 0.22em;
+    line-height: 1;
+  }
+  .wordmark.lg { font-size: 2.6rem; }
+  .wordmark.md { font-size: 1.6rem; }
+  .wordmark.sm { font-size: 1.05rem; }
+  .wordmark.xs { font-size: 0.78rem; }
+
+  .on-cream { color: var(--deep); }
+  .on-dark  { color: var(--cream); }
+
+  /* ── Size scale ──────────────────────────────────────── */
+  .scale {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    padding: 36px 40px;
+    background: var(--cream);
+    border: 1px solid var(--line);
+  }
+  .scale-row {
+    display: grid;
+    grid-template-columns: 100px 1fr;
+    align-items: baseline;
+    gap: 24px;
+    padding-bottom: 22px;
+    border-bottom: 1px solid var(--line);
+  }
+  .scale-row:last-child { border-bottom: none; padding-bottom: 0; }
+  .scale-label {
+    font-size: 0.5rem;
+    letter-spacing: 0.28em;
+    text-transform: uppercase;
+    color: var(--earth);
+  }
+  .scale-spec {
+    font-size: 0.62rem;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: var(--tan);
+    margin-top: 6px;
+  }
+
+  /* ── Spec card ───────────────────────────────────────── */
+  .spec-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1px;
+    background: var(--line);
+    border: 1px solid var(--line);
+  }
+  .spec {
+    background: var(--cream);
+    padding: 22px 20px;
+  }
+  .spec-key {
+    font-size: 0.5rem;
+    letter-spacing: 0.28em;
+    text-transform: uppercase;
+    color: var(--earth);
+    margin-bottom: 10px;
+  }
+  .spec-val {
+    font-family: 'Satoshi', sans-serif;
+    font-size: 1rem;
+    font-weight: 500;
+    color: var(--deep);
+  }
+  .spec-val .num {
+    font-weight: 900;
+  }
+  .spec-sub {
+    font-size: 0.7rem;
+    color: var(--earth);
+    margin-top: 4px;
+  }
+
+  /* ── Clear-space card ────────────────────────────────── */
+  .clearspace {
+    background: var(--cream);
+    border: 1px solid var(--line);
+    padding: 48px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .cs-frame {
+    position: relative;
+    padding: 56px 80px;
+  }
+  .cs-frame::before, .cs-frame::after,
+  .cs-frame > .edge-t, .cs-frame > .edge-b,
+  .cs-frame > .edge-l, .cs-frame > .edge-r {
+    content: '';
+    position: absolute;
+    background: var(--gold);
+    opacity: 0.3;
+  }
+  .cs-frame::before { top: 0; left: 0; width: 14px; height: 1px; }
+  .cs-frame::after  { top: 0; left: 0; width: 1px; height: 14px; }
+  .edge-tr-h { top: 0; right: 0; width: 14px; height: 1px; }
+  .edge-tr-v { top: 0; right: 0; width: 1px; height: 14px; }
+  .edge-bl-h { bottom: 0; left: 0; width: 14px; height: 1px; }
+  .edge-bl-v { bottom: 0; left: 0; width: 1px; height: 14px; }
+  .edge-br-h { bottom: 0; right: 0; width: 14px; height: 1px; }
+  .edge-br-v { bottom: 0; right: 0; width: 1px; height: 14px; }
+  .cs-x {
+    position: absolute;
+    font-size: 0.5rem;
+    letter-spacing: 0.28em;
+    text-transform: uppercase;
+    color: var(--gold);
+    font-weight: 500;
+  }
+  .cs-x.t { top: -22px; left: 50%; transform: translateX(-50%); }
+  .cs-x.b { bottom: -22px; left: 50%; transform: translateX(-50%); }
+
+</style>
+</head>
+<body>
+  <div class="page-eyebrow">Brand · Identity</div>
+  <h1 class="page-title">Logo Lockup</h1>
+  <p class="page-meta">Wordmark de Luminae en Satoshi Black, uppercase, con tracking expandido. Sin tagline ni descriptor regional — la marca se sostiene por sí sola.</p>
+
+  <div class="hairline"></div>
+
+  <!-- 1. Lockups across surfaces -->
+  <div class="section">
+    <div class="section-title">Surfaces</div>
+    <div class="grid">
+      <div class="swatch cream">
+        <span class="tag">On Cream</span>
+        <div class="wordmark lg on-cream">LUMINAE</div>
+      </div>
+      <div class="swatch deep">
+        <span class="tag">On Deep</span>
+        <div class="wordmark lg on-dark">LUMINAE</div>
+      </div>
+      <div class="swatch deep2">
+        <span class="tag">On Deep 2</span>
+        <div class="wordmark lg on-dark">LUMINAE</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- 2. Size scale -->
+  <div class="section">
+    <div class="section-title">Size scale</div>
+    <div class="scale">
+      <div class="scale-row">
+        <div>
+          <div class="scale-label">Display</div>
+          <div class="scale-spec">42px · tracking 0.22em</div>
+        </div>
+        <div class="wordmark lg on-cream">LUMINAE</div>
+      </div>
+      <div class="scale-row">
+        <div>
+          <div class="scale-label">Header</div>
+          <div class="scale-spec">26px · tracking 0.22em</div>
+        </div>
+        <div class="wordmark md on-cream">LUMINAE</div>
+      </div>
+      <div class="scale-row">
+        <div>
+          <div class="scale-label">Compact</div>
+          <div class="scale-spec">17px · tracking 0.22em</div>
+        </div>
+        <div class="wordmark sm on-cream">LUMINAE</div>
+      </div>
+      <div class="scale-row">
+        <div>
+          <div class="scale-label">Micro</div>
+          <div class="scale-spec">12.5px · tracking 0.22em</div>
+        </div>
+        <div class="wordmark xs on-cream">LUMINAE</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- 3. Clear-space -->
+  <div class="section">
+    <div class="section-title">Clear-space</div>
+    <div class="clearspace">
+      <div class="cs-frame">
+        <span class="edge-t" style="top:0;right:0;width:14px;height:1px;"></span>
+        <span class="edge-tr-v" style="top:0;right:0;width:1px;height:14px;background:var(--gold);opacity:.3;position:absolute;"></span>
+        <span class="edge-bl-h" style="bottom:0;left:0;width:14px;height:1px;background:var(--gold);opacity:.3;position:absolute;"></span>
+        <span class="edge-bl-v" style="bottom:0;left:0;width:1px;height:14px;background:var(--gold);opacity:.3;position:absolute;"></span>
+        <span class="edge-br-h" style="bottom:0;right:0;width:14px;height:1px;background:var(--gold);opacity:.3;position:absolute;"></span>
+        <span class="edge-br-v" style="bottom:0;right:0;width:1px;height:14px;background:var(--gold);opacity:.3;position:absolute;"></span>
+        <span class="cs-x t">x = ½ cap-height</span>
+        <span class="cs-x b">minimum padding all sides</span>
+        <div class="wordmark lg on-cream">LUMINAE</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- 4. Specs -->
+  <div class="section">
+    <div class="section-title">Wordmark spec</div>
+    <div class="spec-grid">
+      <div class="spec">
+        <div class="spec-key">Typeface</div>
+        <div class="spec-val">Satoshi</div>
+        <div class="spec-sub">By Indian Type Foundry</div>
+      </div>
+      <div class="spec">
+        <div class="spec-key">Weight</div>
+        <div class="spec-val"><span class="num">900</span> · Black</div>
+        <div class="spec-sub">Always</div>
+      </div>
+      <div class="spec">
+        <div class="spec-key">Tracking</div>
+        <div class="spec-val">0.22 em</div>
+        <div class="spec-sub">letter-spacing</div>
+      </div>
+      <div class="spec">
+        <div class="spec-key">Case</div>
+        <div class="spec-val">UPPERCASE</div>
+        <div class="spec-sub">No mixed-case use</div>
+      </div>
+    </div>
+  </div>
+
+</body>
+</html>

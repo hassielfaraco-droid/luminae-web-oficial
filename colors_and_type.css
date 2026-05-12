@@ -1,0 +1,358 @@
+/* ============================================================
+   LUMINAE DESIGN SYSTEM — colors_and_type.css
+   Source of truth: hassielfaraco-droid/luminae-web app/globals.css
+   ============================================================ */
+
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400;1,500&display=swap');
+
+/* ── Satoshi — Títulos / Headlines ─────────────────────── */
+@font-face { font-family:'Satoshi'; src:url('fonts/Satoshi-Light.otf') format('opentype'); font-weight:300; font-style:normal; font-display:swap; }
+@font-face { font-family:'Satoshi'; src:url('fonts/Satoshi-LightItalic.otf') format('opentype'); font-weight:300; font-style:italic; font-display:swap; }
+@font-face { font-family:'Satoshi'; src:url('fonts/Satoshi-Regular.otf') format('opentype'); font-weight:400; font-style:normal; font-display:swap; }
+@font-face { font-family:'Satoshi'; src:url('fonts/Satoshi-Italic.otf') format('opentype'); font-weight:400; font-style:italic; font-display:swap; }
+@font-face { font-family:'Satoshi'; src:url('fonts/Satoshi-Medium.otf') format('opentype'); font-weight:500; font-style:normal; font-display:swap; }
+@font-face { font-family:'Satoshi'; src:url('fonts/Satoshi-MediumItalic.otf') format('opentype'); font-weight:500; font-style:italic; font-display:swap; }
+@font-face { font-family:'Satoshi'; src:url('fonts/Satoshi-Bold.otf') format('opentype'); font-weight:700; font-style:normal; font-display:swap; }
+@font-face { font-family:'Satoshi'; src:url('fonts/Satoshi-BoldItalic.otf') format('opentype'); font-weight:700; font-style:italic; font-display:swap; }
+@font-face { font-family:'Satoshi'; src:url('fonts/Satoshi-Black.otf') format('opentype'); font-weight:900; font-style:normal; font-display:swap; }
+@font-face { font-family:'Satoshi'; src:url('fonts/Satoshi-BlackItalic.otf') format('opentype'); font-weight:900; font-style:italic; font-display:swap; }
+
+/* ── Plus Jakarta Sans — Subtítulos / Botones / UI labels ── */
+/* Variable (covers 200–800 in one file — preferred) */
+@font-face {
+  font-family: 'Plus Jakarta Sans';
+  src: url('fonts/PlusJakartaSans-VariableFont_wght.ttf') format('truetype');
+  font-weight: 200 800;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Plus Jakarta Sans';
+  src: url('fonts/PlusJakartaSans-Italic-VariableFont_wght.ttf') format('truetype');
+  font-weight: 200 800;
+  font-style: italic;
+  font-display: swap;
+}
+/* Static fallbacks (loaded only by browsers that don't support variable fonts) */
+@font-face { font-family:'Plus Jakarta Sans'; src:url('fonts/PlusJakartaSans-ExtraLight.ttf') format('truetype'); font-weight:200; font-style:normal; }
+@font-face { font-family:'Plus Jakarta Sans'; src:url('fonts/PlusJakartaSans-ExtraLightItalic.ttf') format('truetype'); font-weight:200; font-style:italic; }
+@font-face { font-family:'Plus Jakarta Sans'; src:url('fonts/PlusJakartaSans-Light.ttf') format('truetype'); font-weight:300; font-style:normal; }
+@font-face { font-family:'Plus Jakarta Sans'; src:url('fonts/PlusJakartaSans-LightItalic.ttf') format('truetype'); font-weight:300; font-style:italic; }
+@font-face { font-family:'Plus Jakarta Sans'; src:url('fonts/PlusJakartaSans-Regular.ttf') format('truetype'); font-weight:400; font-style:normal; }
+@font-face { font-family:'Plus Jakarta Sans'; src:url('fonts/PlusJakartaSans-Italic.ttf') format('truetype'); font-weight:400; font-style:italic; }
+@font-face { font-family:'Plus Jakarta Sans'; src:url('fonts/PlusJakartaSans-Medium.ttf') format('truetype'); font-weight:500; font-style:normal; }
+@font-face { font-family:'Plus Jakarta Sans'; src:url('fonts/PlusJakartaSans-MediumItalic.ttf') format('truetype'); font-weight:500; font-style:italic; }
+@font-face { font-family:'Plus Jakarta Sans'; src:url('fonts/PlusJakartaSans-SemiBold.ttf') format('truetype'); font-weight:600; font-style:normal; }
+@font-face { font-family:'Plus Jakarta Sans'; src:url('fonts/PlusJakartaSans-Bold.ttf') format('truetype'); font-weight:700; font-style:normal; }
+@font-face { font-family:'Plus Jakarta Sans'; src:url('fonts/PlusJakartaSans-BoldItalic.ttf') format('truetype'); font-weight:700; font-style:italic; }
+@font-face { font-family:'Plus Jakarta Sans'; src:url('fonts/PlusJakartaSans-ExtraBold.ttf') format('truetype'); font-weight:800; font-style:normal; }
+@font-face { font-family:'Plus Jakarta Sans'; src:url('fonts/PlusJakartaSans-ExtraBoldItalic.ttf') format('truetype'); font-weight:800; font-style:italic; }
+
+/* ── BRAND FONT: Inter (uploaded — variable) ───────────── */
+@font-face {
+  font-family: 'Inter';
+  src: url('fonts/Inter-VariableFont_opsz_wght.ttf') format('truetype');
+  font-weight: 100 900;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Inter';
+  src: url('fonts/Inter-Italic-VariableFont_opsz_wght.ttf') format('truetype');
+  font-weight: 100 900;
+  font-style: italic;
+  font-display: swap;
+}
+/* Inter is now fully served from local font files — no Google Fonts fallback needed. */
+
+/* ── BASE COLOR TOKENS ─────────────────────────────────────── */
+:root {
+  /* Darks */
+  --color-deep:       #2C2416;   /* Primary brand dark — buttons, text, bg */
+  --color-deep2:      #1A150D;   /* Footer / deepest dark */
+
+  /* Lights / Surfaces */
+  --color-cream:      #F7F2EB;   /* Page background */
+  --color-light:      #F0E8DA;   /* Warm light surface */
+  --color-beige:      #E8DDD0;   /* Secondary surface, image placeholder bg */
+
+  /* Neutrals */
+  --color-sand:       #D4B896;   /* Neutral support */
+  --color-earth:      #C4A882;   /* Borders, muted text, placeholders */
+  --color-warm:       #6A5A42;   /* Body copy, secondary text */
+
+  /* Accents */
+  --color-gold:       #B8975A;   /* Premium accent — CTAs, eyebrows, badges */
+  --color-gold-lt:    #D4AD6A;   /* Lighter gold variant */
+  --color-moss:       #7A8C6E;   /* Bestseller tag, success / shipping */
+  --color-sale:       #8B2020;   /* Sale tag */
+}
+
+/* ── SEMANTIC COLOR TOKENS ─────────────────────────────────── */
+:root {
+  /* Backgrounds */
+  --bg-page:          var(--color-cream);
+  --bg-surface:       var(--color-beige);
+  --bg-inverse:       var(--color-deep);
+  --bg-footer:        var(--color-deep2);
+
+  /* Text */
+  --text-primary:     var(--color-deep);
+  --text-secondary:   var(--color-warm);
+  --text-muted:       var(--color-earth);
+  --text-inverse:     var(--color-cream);
+  --text-accent:      var(--color-gold);
+
+  /* Borders */
+  --border-subtle:    rgba(196,168,130,0.2);
+  --border-default:   rgba(196,168,130,0.3);
+  --border-input:     rgba(196,168,130,0.3);
+  --border-focus:     var(--color-gold);
+
+  /* Interactive */
+  --interactive-primary:        var(--color-deep);
+  --interactive-primary-hover:  var(--color-gold);
+  --interactive-accent:         var(--color-gold);
+  --interactive-accent-hover:   var(--color-deep);
+
+  /* Tags */
+  --tag-new-bg:       var(--color-deep);
+  --tag-new-text:     var(--color-gold);
+  --tag-sale-bg:      var(--color-sale);
+  --tag-sale-text:    #ffffff;
+  --tag-best-bg:      var(--color-moss);
+  --tag-best-text:    #ffffff;
+
+  /* Shadows */
+  --shadow-sm:        0 2px 12px rgba(44,36,22,0.06);
+  --shadow-md:        0 8px 32px rgba(44,36,22,0.10);
+  --shadow-lg:        0 20px 60px rgba(44,36,22,0.14);
+
+  /* Transitions */
+  --transition:       all 0.3s cubic-bezier(0.4,0,0.2,1);
+  --transition-slow:  all 0.7s ease;
+  --transition-cart:  0.35s cubic-bezier(0.4,0,0.2,1);
+}
+
+/* ── TYPOGRAPHY ────────────────────────────────────────────── */
+:root {
+  --font-headline:    'Satoshi', system-ui, sans-serif;      /* Títulos / Headlines — Bold/Black */
+  --font-display:     'Cormorant Garamond', Georgia, serif;  /* Editorial display / italic accents */
+  --font-ui:          'Plus Jakarta Sans', system-ui, sans-serif; /* Subtítulos / Botones / Labels — SemiBold/Medium */
+  --font-body:        'Inter', system-ui, sans-serif;        /* Cuerpo / Texto corrido — Regular/Medium */
+  /* All families fully local. Brand book stack:
+     Satoshi Bold/Black → headlines
+     Plus Jakarta Sans SemiBold/Medium → subtitles, buttons
+     Inter Regular/Medium → body copy
+     Cormorant Garamond → editorial / serif accents */
+
+  /* Scale */
+  --text-hero:        clamp(3rem, 6vw, 6rem);
+  --text-h1:          clamp(2.5rem, 5vw, 5rem);
+  --text-h2:          clamp(1.8rem, 3vw, 2.8rem);
+  --text-h3:          1.4rem;
+  --text-h4:          1.05rem;
+  --text-body:        1rem;
+  --text-sm:          0.875rem;
+  --text-xs:          0.75rem;
+  --text-label-sm:    0.68rem;
+  --text-label-xs:    0.6rem;
+
+  /* Leading */
+  --leading-display:  1.05;
+  --leading-heading:  1.1;
+  --leading-body:     1.6;
+  --leading-relaxed:  1.8;
+
+  /* Tracking */
+  --tracking-display: normal;
+  --tracking-tight:   -0.01em;
+  --tracking-label:   0.2em;
+  --tracking-wide:    0.3em;
+  --tracking-widest:  0.35em;
+}
+
+/* ── BASE RESET & BODY ─────────────────────────────────────── */
+*, *::before, *::after { box-sizing: border-box; }
+html { scroll-behavior: smooth; -webkit-font-smoothing: antialiased; }
+body {
+  background: var(--bg-page);
+  color: var(--text-primary);
+  font-family: var(--font-body);
+  font-weight: 300;
+  line-height: var(--leading-body);
+}
+
+/* ── HEADINGS ──────────────────────────────────────────────── */
+h1, h2, h3 {
+  font-family: var(--font-display);
+  font-weight: 300;
+  line-height: var(--leading-heading);
+}
+h1 { font-size: var(--text-h1); }
+h2 { font-size: var(--text-h2); }
+h3 { font-size: var(--text-h3); }
+h4 { font-size: var(--text-h4); font-family: var(--font-display); font-weight: 300; }
+
+.font-display { font-family: var(--font-display); }
+.font-body    { font-family: var(--font-body); }
+
+/* ── LABEL UTILITIES ───────────────────────────────────────── */
+.label-xs {
+  font-size: var(--text-label-xs);
+  letter-spacing: var(--tracking-wide);
+  text-transform: uppercase;
+  font-weight: 400;
+}
+.label-sm {
+  font-size: var(--text-label-sm);
+  letter-spacing: var(--tracking-label);
+  text-transform: uppercase;
+  font-weight: 400;
+}
+
+/* ── EYEBROW ───────────────────────────────────────────────── */
+.eyebrow {
+  font-size: var(--text-label-xs);
+  letter-spacing: var(--tracking-wide);
+  text-transform: uppercase;
+  font-weight: 400;
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  color: var(--color-gold);
+}
+.eyebrow::before, .eyebrow::after {
+  content: '';
+  flex: 0 0 36px;
+  height: 1px;
+  background: var(--color-earth);
+  opacity: 0.4;
+}
+
+/* ── BUTTONS ───────────────────────────────────────────────── */
+.btn-primary {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 16px 32px;
+  background: var(--color-deep);
+  color: var(--color-cream);
+  cursor: pointer;
+  text-decoration: none;
+  border: 1px solid transparent;
+  font-family: var(--font-body);
+  font-size: var(--text-label-sm);
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  transition: var(--transition);
+  border-radius: 0;
+}
+.btn-primary:hover { background: var(--color-gold); color: var(--color-deep); }
+.btn-primary:disabled { opacity: 0.5; cursor: not-allowed; }
+
+.btn-secondary {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 15px 28px;
+  background: transparent;
+  color: var(--color-deep);
+  border: 1px solid rgba(44,36,22,0.25);
+  cursor: pointer;
+  text-decoration: none;
+  font-family: var(--font-body);
+  font-size: var(--text-label-sm);
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  transition: var(--transition);
+  border-radius: 0;
+}
+.btn-secondary:hover { background: var(--color-deep); color: var(--color-cream); }
+
+.btn-gold {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 16px 32px;
+  background: var(--color-gold);
+  color: var(--color-deep);
+  cursor: pointer;
+  text-decoration: none;
+  border: 1px solid transparent;
+  font-family: var(--font-body);
+  font-size: var(--text-label-sm);
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  transition: var(--transition);
+  border-radius: 0;
+}
+.btn-gold:hover { background: var(--color-deep); color: var(--color-cream); }
+
+/* ── INPUTS ────────────────────────────────────────────────── */
+.input-luminae {
+  width: 100%;
+  padding: 12px 16px;
+  background: rgba(255,255,255,0.6);
+  border: 1px solid var(--border-input);
+  color: var(--text-primary);
+  font-family: var(--font-body);
+  font-size: var(--text-sm);
+  outline: none;
+  transition: var(--transition);
+  border-radius: 0;
+}
+.input-luminae:focus { border-color: var(--color-gold); background: white; }
+.input-luminae::placeholder { color: var(--color-earth); opacity: 0.6; }
+
+/* ── PRODUCT TAGS ──────────────────────────────────────────── */
+.product-tag {
+  font-size: var(--text-label-xs);
+  letter-spacing: var(--tracking-wide);
+  text-transform: uppercase;
+  font-weight: 500;
+  padding: 4px 10px;
+}
+.tag-new  { background: var(--tag-new-bg);  color: var(--tag-new-text); }
+.tag-sale { background: var(--tag-sale-bg); color: var(--tag-sale-text); }
+.tag-best { background: var(--tag-best-bg); color: var(--tag-best-text); }
+
+/* ── DIVIDER ───────────────────────────────────────────────── */
+.divider-gold {
+  height: 1px;
+  background: linear-gradient(90deg, transparent, var(--color-earth), transparent);
+  opacity: 0.3;
+}
+
+/* ── LAYOUT ────────────────────────────────────────────────── */
+.section-padding {
+  padding-left: 24px;
+  padding-right: 24px;
+}
+.section-max {
+  max-width: 1280px;
+  margin: 0 auto;
+}
+@media (min-width: 768px)  { .section-padding { padding-left: 40px;  padding-right: 40px;  } }
+@media (min-width: 1024px) { .section-padding { padding-left: 64px;  padding-right: 64px;  } }
+
+/* ── ANIMATIONS ────────────────────────────────────────────── */
+@keyframes fadeUp   { from { opacity:0; transform:translateY(24px) } to { opacity:1; transform:translateY(0) } }
+@keyframes fadeIn   { from { opacity:0 } to { opacity:1 } }
+@keyframes slideLeft{ from { transform:translateX(100%) } to { transform:translateX(0) } }
+@keyframes marquee  { from { transform:translateX(0) } to { transform:translateX(-50%) } }
+@keyframes float    { 0%,100% { transform:translateY(0) } 50% { transform:translateY(-10px) } }
+
+.animate-fade-up   { animation: fadeUp    0.7s ease both; }
+.animate-fade-in   { animation: fadeIn    0.5s ease both; }
+.animate-marquee   { animation: marquee  25s linear infinite; }
+.animate-float     { animation: float     4s ease-in-out infinite; }
+
+.reveal { opacity:0; transform:translateY(28px); transition:opacity 0.8s ease, transform 0.8s ease; }
+.reveal.visible { opacity:1; transform:translateY(0); }
+
+/* ── SCROLLBAR ─────────────────────────────────────────────── */
+::-webkit-scrollbar       { width: 6px; }
+::-webkit-scrollbar-track { background: var(--color-beige); }
+::-webkit-scrollbar-thumb { background: var(--color-earth); border-radius: 3px; }
+::selection               { background: var(--color-gold); color: var(--color-deep); }
