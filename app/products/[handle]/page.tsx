@@ -1,5 +1,5 @@
 'use client'
-import { useState, useEffect } from 'react'
+import { useState, useEffect, use } from 'react'
 import Link from 'next/link'
 
 /* ── mock data ── */
@@ -70,8 +70,9 @@ function Stars({ rating, size = 14 }: { rating: number; size?: number }) {
   )
 }
 
-export default function ProductPage({ params }: { params: { handle: string } }) {
-  const product = PRODUCTS[params.handle] || PRODUCTS['cerave-hydrating-cleanser']
+export default function ProductPage({ params }: { params: Promise<{ handle: string }> }) {
+  const { handle } = use(params)
+  const product = PRODUCTS[handle] || PRODUCTS['cerave-hydrating-cleanser']
   const [selectedImage, setSelectedImage] = useState(0)
   const [selectedSize, setSelectedSize] = useState(0)
   const [qty, setQty] = useState(1)
